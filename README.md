@@ -13,6 +13,8 @@ $ npm install aws-textract-node
 ```
 
 ## Usage
+![example](https://github.com/EkoSetiyo13/aws-textract-node/assets/32205313/fd3a3ad7-7589-4333-be31-42157043ac57)
+
 ```javascript
 let config = {
     aws_region: AWS_REGION,
@@ -26,6 +28,7 @@ const data = await awsTextract.TextractProcess({
 });
 
 const line = awsTextract.getValue(data, "Total");
+// { key: 'Total', value: '$115.00' }
 ```
 
 ### Roadmap
