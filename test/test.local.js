@@ -13,18 +13,10 @@ async function test() {
     ...config,
     pathFile: "./test/example.jpeg",
   });
-  const line = awsTextract.getValue(data, "Total");
-  const email = awsTextract.getValue(data, "Email");
-  const column = awsTextract.getValue(data, "Test product #4", 3);
+  const line = awsTextract.getValue({ source: data, key: "Total" });
 
   console.log(
     util.inspect(line, { showHidden: false, depth: null, colors: true })
-  );
-  console.log(
-    util.inspect(email, { showHidden: false, depth: null, colors: true })
-  );
-  console.log(
-    util.inspect(column, { showHidden: false, depth: null, colors: true })
   );
 }
 
