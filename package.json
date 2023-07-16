@@ -1,0 +1,20 @@
+{
+  "name": "aws-textract-node",
+  "version": "0.0.2",
+  "description": "aws textract unofficial",
+  "main": "./lib",
+  "scripts": {
+    "test": "node test/test.js",
+    "test-local": "node test/test.local.js"
+  },
+  "keywords": [
+    "aws",
+    "textract"
+  ],
+  "author": "Eko Setiyo Budi Purnomo",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-textract": "^3.370.0",
+    "dotenv": "^16.3.1"
+  }
+}
