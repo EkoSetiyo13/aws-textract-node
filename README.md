@@ -2,10 +2,6 @@
 
 Simple Textract PDF and Image File
 
-### Tech Stack
-
-- Javascript (Node JS)
-
 ### Install
 
 ```
@@ -13,13 +9,29 @@ $ npm install aws-textract-node
 ```
 
 ## Usage
-![example](https://github.com/EkoSetiyo13/aws-textract-node/assets/32205313/fd3a3ad7-7589-4333-be31-42157043ac57)
 
 ```javascript
 let config = {
-    aws_region: AWS_REGION,
-    aws_access_key_id: AWS_ACCESS_KEY_ID,
-    aws_secret_access_key: AWS_SECRET_ACCESS_KEY,
+    aws_region: xxx,
+    aws_access_key_id: xxx,
+    aws_secret_access_key: xxx,
+};
+
+const data = await awsTextract.TextractProcess({
+    ...config,
+    pathFile: xxx,
+});
+```
+
+## Example
+
+<img src="https://github.com/EkoSetiyo13/aws-textract-node/blob/main/test/example.jpeg" width="250" height="250">
+
+```javascript
+let config = {
+    aws_region: xxx,
+    aws_access_key_id: xxx,
+    aws_secret_access_key: xxx,
 };
 
 const data = await awsTextract.TextractProcess({
@@ -31,13 +43,19 @@ const line = awsTextract.getValue(data, "Total");
 // { key: 'Total', value: '$115.00' }
 ```
 
+## Helper
+
+| No | Function    | Description    | Params    |
+| :---:   | :---: | :---: | :--- |
+| 1 |  `getValue()`   | Get Word (Value) From Another Word (Key)  | `source` : data from textract [array], <br> `key` : keyword [string], <br>`next` : if between the key and value there is word, default next=1 [integer] |
+
+
 ### Roadmap
 
 - [x] Using AnalyzeDocumentCommand.
 - [x] Function Helper (getValue)
-- [ ]
+- [ ] ..
 
 ### Contributing
 
-Developed By
-Eko Setiyo Budi Purnomo
+1. Eko Setiyo Budi Purnomo (eko.setiyobp@gmail.com)
