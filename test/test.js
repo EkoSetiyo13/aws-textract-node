@@ -13,9 +13,6 @@ async function test() {
     ...config,
     pathFile: "./test/example.jpeg",
   });
-  const line = awsTextract.getValue(data, "Total");
-  const email = awsTextract.getValue(data, "Email");
-  const column = awsTextract.getValue(data, "Test product #4", 3);
 }
 
 test();

@@ -11,8 +11,16 @@
     "aws",
     "textract"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EkoSetiyo13/aws-textract-node.git"
+  },
   "author": "Eko Setiyo Budi Purnomo",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EkoSetiyo13/aws-textract-node/issues"
+  },
+  "homepage": "https://github.com/EkoSetiyo13/aws-textract-node#readme",
   "dependencies": {
     "@aws-sdk/client-textract": "^3.370.0",
     "dotenv": "^16.3.1"
